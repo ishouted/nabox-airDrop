@@ -6,22 +6,22 @@
     </div>
     <div class="right" v-if="address">
       <div class="address">
-        <span class="network" @click.stop="showNetworkList=!showNetworkList">
+        <span class="network">
            {{ $store.state.network }}
 <!--           <i class="el-icon-caret-bottom" style="margin-left: -5px"></i>-->
         </span>
         <span @click="showAccountDialog=true">{{ superLong(address, 5) }}</span>
-        <ul class="support-network-list" v-show="showNetworkList">
-          <li
-            v-for="item in supportChainList"
-            :key="item.chainName"
-            :class="{'active': item.chainName === currentChain}"
-            @click="switchChain(item)"
-          >
-            {{ item.chainName }}
-          </li>
-          <div class="pop-arrow"></div>
-        </ul>
+<!--        <ul class="support-network-list" v-show="showNetworkList">-->
+<!--          <li-->
+<!--            v-for="item in supportChainList"-->
+<!--            :key="item.chainName"-->
+<!--            :class="{'active': item.chainName === currentChain}"-->
+<!--            @click="switchChain(item)"-->
+<!--          >-->
+<!--            {{ item.chainName }}-->
+<!--          </li>-->
+<!--          <div class="pop-arrow"></div>-->
+<!--        </ul>-->
       </div>
       <span @click="showMenu=true" class="iconfont icon-menu"></span>
     </div>
